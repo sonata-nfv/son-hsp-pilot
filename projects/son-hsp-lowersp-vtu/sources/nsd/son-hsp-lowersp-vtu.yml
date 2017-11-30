@@ -1,6 +1,6 @@
 descriptor_version: "1.0"
 
-vendor: "eu.sonata-nfv.service-descriptor"
+vendor: "eu.sonata-nfv"
 name: "son-hsp-lowersp-vtu"
 version: "0.9.1"
 author: "SONATA Consortium"
