@@ -48,6 +48,6 @@ virtual_links:
   - id: "vlvccout"
     connectivity_type: "E-Line"
     connection_points_reference:
-      - "vnf_vtu:cpoutput"
+      - "vnf_vtu:cpinput"
       - "nscpoutput"
 
