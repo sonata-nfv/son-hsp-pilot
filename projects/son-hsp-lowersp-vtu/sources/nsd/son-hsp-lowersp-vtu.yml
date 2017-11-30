@@ -1,19 +1,19 @@
 descriptor_version: "1.0"
 
 vendor: "eu.sonata-nfv.service-descriptor"
-name: "son-hsp-lowersp-vtc"
+name: "son-hsp-lowersp-vtu"
 version: "0.9.1"
 author: "SONATA Consortium"
-description: "Descriptor to package vtc vnf"
+description: "Descriptor to package vtu vnf"
 ##
 ## The various network functions this service
 ## is composed of.
 ##
 network_functions:
-  - vnf_id: "vnf_vtc"
+  - vnf_id: "vnf_vtu"
     vnf_vendor: "eu.sonata-nfv"
-    vnf_name: "vtc-vnf"
-    vnf_version: "0.2"
+    vnf_name: "vtu-vnf"
+    vnf_version: "0.1"
 
 ##
 ## The NS connection points to the
@@ -38,16 +38,16 @@ virtual_links:
   - id: "vlmgmt"
     connectivity_type: "E-LAN"
     connection_points_reference:
-      - "vnf_vtc:cpmgmt"
+      - "vnf_vtu:cpmgmt"
       - "nscpmgmt"
   - id: "vlinput"
     connectivity_type: "E-Line"
     connection_points_reference:
       - "nscpinput"
-      - "vnf_vtc:cpinput"
+      - "vnf_vtu:cpinput"
   - id: "vlvccout"
     connectivity_type: "E-Line"
     connection_points_reference:
-      - "vnf_vtc:cpoutput"
+      - "vnf_vtu:cpoutput"
       - "nscpoutput"
 
