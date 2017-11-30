@@ -1,0 +1,53 @@
+descriptor_version: "1.0"
+
+vendor: "eu.sonata-nfv.service-descriptor"
+name: "son-hsp-lowersp-vtc"
+version: "0.9.1"
+author: "SONATA Consortium"
+description: "Descriptor to package vtc vnf"
+##
+## The various network functions this service
+## is composed of.
+##
+network_functions:
+  - vnf_id: "vnf_vtc"
+    vnf_vendor: "eu.sonata-nfv"
+    vnf_name: "vtc-vnf"
+    vnf_version: "0.2"
+
+##
+## The NS connection points to the
+## outside world.
+##
+connection_points:
+  - id: "nscpmgmt"
+    interface: "ipv4"
+    type: "management"
+  - id: "nscpinput"
+    interface: "ipv4"
+    type: "external"
+  - id: "nscpoutput"
+    interface: "ipv4"
+    type: "external"
+
+##
+## The virtual links that interconnect
+## the different connections points.
+##
+virtual_links:
+  - id: "vlmgmt"
+    connectivity_type: "E-LAN"
+    connection_points_reference:
+      - "vnf_vtc:cpmgmt"
+      - "nscpmgmt"
+  - id: "vlinput"
+    connectivity_type: "E-Line"
+    connection_points_reference:
+      - "nscpinput"
+      - "vnf_vtc:cpinput"
+  - id: "vlvccout"
+    connectivity_type: "E-Line"
+    connection_points_reference:
+      - "vnf_vtc:cpoutput"
+      - "nscpoutput"
+
