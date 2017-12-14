@@ -2,7 +2,7 @@ descriptor_extension: yml
 package:
   description: SONATA HSP LOWER SP VTU
   maintainer: Thomas Soenen, imec, thomas.soenen@ugent.be
-  name: "son-hsp-lowersp-vtu"
+  name: "vtu-vnf"
   vendor: "eu.sonata-nfv"
-  version: "0.1"
+  version: "0.5"
 version: '0.5'
